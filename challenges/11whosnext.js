@@ -1,6 +1,20 @@
 function whosnext(persons, now) {
   // Write your code here
+  const today = new Date(now);
 
+  persons = persons.map(
+    person => {
+      const diff = new Date(person.birthday) - today;
+      return { 'name': person.name, diff };
+    }
+  ).sort((a, b) => { return a.diff - b.diff })
+
+  if (!persons.every(person => person.diff < 0)) {
+    persons = persons.filter(person => person.diff > 0);
+  }
+
+  const next = persons.filter(person => person.diff === persons[0].diff)
+  return (next.length === 1) ? next[0].name : next.map(person => person.name).sort()
 }
 
 const { assert } = require('chai');
