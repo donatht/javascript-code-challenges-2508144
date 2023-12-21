@@ -1,6 +1,11 @@
 function isAllPossibilities(array) {
   // Write your code here
-
+  for (let i = 0; i < array.length; i++) {
+    if (array.sort()[i]!=i){
+      return false;
+    } 
+  }
+  return true;
 }
 
 
