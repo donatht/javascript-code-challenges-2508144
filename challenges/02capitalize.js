@@ -1,6 +1,9 @@
 function capitalize(string) {
   // Write your code here
-
+  const words = string.split(' ');
+  return words.map(word => 
+    String(word).charAt(0).toUpperCase() + String(word).slice(1)
+  ).join(' ');
 }
 
 
