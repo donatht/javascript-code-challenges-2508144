@@ -1,5 +1,16 @@
 function arrayDiff(a, b) {
   // Write your code here
+  if (a.length < b.length) {
+    [a, b] = [b, a]
+  }
+  b.forEach(element => {
+    if (a.includes(element)) {
+      let index = a.findIndex(e => e == element);
+      a.splice(index, 1);
+    }
+  });
+  return a
+
 
 }
 
