@@ -1,5 +1,8 @@
 function unique(ingredients) {
   // Write your code here
+  var shoppingList = [...new Set(ingredients.flat())]
+
+  return shoppingList.sort()
 
 }
 
