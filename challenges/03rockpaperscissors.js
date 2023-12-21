@@ -1,9 +1,22 @@
 const rps = (p1, p2) => {
   // Write your code here
 
+  if (p1 == p2) {
+    return 0;
+  }
+  if (p1 == 'rock' && p2 == 'scissors') {
+    return 1;
+  }
+  if (p1 == 'scissors' && p2 == 'paper') {
+    return 1;
+  }
+  if (p1 == 'paper' && p2 == 'rock') {
+    return 1;
+  } else return 2;
+
 }
 
-const { assert } = require('chai'); 
+const { assert } = require('chai');
 describe('Tests', () => {
   it("tests", () => {
     assert.equal(rps('rock', 'scissors'), 1);
