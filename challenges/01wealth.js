@@ -1,5 +1,20 @@
 function redistributeWealth(wealth) {
   // Write your code here
+  var sum = 0;
+  if (Array.isArray(wealth)) {
+    wealth.forEach(element => {
+      sum = sum + element
+    });
+    var average = sum / wealth.length;
+    let newWealth = [];
+    for (let i = 0; i < wealth.length; i++) {
+      newWealth[i] = average;
+    }
+
+    return newWealth;
+
+
+  }
 
 }
 
