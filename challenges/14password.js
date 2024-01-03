@@ -1,6 +1,7 @@
 function isPassword(s) {
-  // Write your code here
- 
+  // Write your code her  
+
+  return /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[(@/]).{8,}$/.test(s)
 }
 
 const { assert } = require('chai');
